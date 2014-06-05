@@ -1,6 +1,6 @@
-# ASH (https://bitbucket.org/jondanao/ash)
+# ASH
 
-Automated Scalable HTML5 Boilerplate powered by Grunt.
+C4 after detonation comes ASH (Automated Scalable HTML5 Boilerplate powered by Grunt)
 
 ## Documentation
 
