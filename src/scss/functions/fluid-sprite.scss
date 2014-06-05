@@ -1,0 +1,15 @@
+@function sizex($sprite_width, $image_width){
+	@return percentage($sprite_width / $image_width);
+}
+
+@function sizey($sprite_height, $image_height){
+	@return percentage($sprite_height / $image_height);
+}
+
+@function posx($image_x, $sprite_width){
+	@return percentage($image_x / $sprite_width);
+}
+
+@function posy($image_y, $sprite_height){
+	@return percentage($image_y / $sprite_height);
+}

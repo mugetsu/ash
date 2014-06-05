@@ -1,0 +1,23 @@
+@mixin anchor-links ($normal: blue, $hover: green, $visited: violet, $active: red, $focus: orange) {    
+    color: $normal;
+
+    &:link {
+        color: $normal;
+    }
+
+    &:hover {
+        color: $hover;
+    }
+
+    &:visited {
+        color: $visited;
+    }
+
+    &:active {
+        color: $active;
+    }
+    
+    &:focus {
+        color: $focus;
+    }
+}

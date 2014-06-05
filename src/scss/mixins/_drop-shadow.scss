@@ -1,0 +1,7 @@
+@mixin drop-shadow($horizontal: 5px, $vertical: 5px, $blur: 5px, $spread: 5px, $color: #000000){
+	-webkit-box-shadow: $horizontal $vertical $blur $spread $color;
+	   -moz-box-shadow: $horizontal $vertical $blur $spread $color;
+	        box-shadow: $horizontal $vertical $blur $spread $color;
+	        -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=#{$spread}, Direction=135, Color='#{$color}')";
+                filter: progid:DXImageTransform.Microsoft.Shadow(Strength=$spread, Direction=135, Color='$color');
+}

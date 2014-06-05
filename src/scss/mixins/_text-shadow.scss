@@ -1,0 +1,5 @@
+@mixin text-shadow($horizontal: 5px, $vertical: 5px, $blur: 5px, $color: #000000){
+	text-shadow: $horizontal $vertical $blur $color;
+	     filter: shadow(color=$color, direction=135, strength=$blur); 
+	 -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(color=#{$color}, direction=135, strength=#{$blur})"; 
+}

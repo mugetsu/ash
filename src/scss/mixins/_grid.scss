@@ -1,0 +1,23 @@
+@mixin grid($wrapper-width: 960px, $columns: 12, $gutter-width: 20px, $column-prefix: ".span-", $row-name: ".row"){
+
+	$column-width: percentage(($wrapper-width / $columns - $gutter-width) / $wrapper-width);
+	$gutter-width: percentage($gutter-width / $wrapper-width);
+
+	.span-0 {
+		margin-left: $gutter-width;
+		float: left;
+	}
+
+	@for $i from 1 through $columns
+	{
+		#{$column-prefix}#{$i}
+		{
+			width: ($column-width * $i) + ($gutter-width * ($i - 1));
+			@extend .span-0;
+		}
+	}
+
+	#{$row-name} {
+		margin-left: $gutter-width * -1;
+	}
+}

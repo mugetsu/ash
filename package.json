@@ -1,0 +1,26 @@
+{
+  "name": "ASH",
+  "title": "Automated Scalable HTML5 Boilerplate powered by Grunt",
+  "url": "https://bitbucket.org/jondanao/ash",
+  "author": "Randell Quitain",
+  "copyright": "2014",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://jondanao@bitbucket.org/jondanao/ash.git"
+  },
+  "devDependencies": {
+    "connect-livereload": "~0.2.0",
+    "grunt": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-connect": "~0.3.0",
+    "grunt-contrib-jshint": "~0.4.3",
+    "grunt-contrib-sass": "~0.5.0",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-watch": "~0.4.4",
+    "grunt-include-replace": "~0.4.1",
+    "grunt-open": "~0.2.0",
+    "matchdep": "~0.1.2"
+  }
+}
