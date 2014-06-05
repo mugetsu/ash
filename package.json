@@ -8,7 +8,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://jondanao@bitbucket.org/jondanao/ash.git"
+    "url": "https://randellquitain@bitbucket.org/jondanao/ash.git"
   },
   "devDependencies": {
     "connect-livereload": "~0.2.0",

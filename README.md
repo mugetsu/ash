@@ -4,7 +4,7 @@ Automated Scalable HTML5 Boilerplate powered by Grunt.
 
 ## Documentation
 
-You may need to install a few assets before you can get started, such as [Node](http://nodejs.org/), Git(github.com), [Grunt](http://gruntjs.com/).
+You may need to install a few assets before you can get started, such as [Node](http://nodejs.org/), [Git](github.com), [Grunt](http://gruntjs.com/).
 
 ## Scaffolding
 
