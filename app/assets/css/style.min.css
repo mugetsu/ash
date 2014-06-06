@@ -436,6 +436,10 @@ body {
   list-style: none;
 }
 
+.introduction {
+  text-align: center;
+}
+
 @font-face {
   font-family: 'Font-Name';
   src: url("../fonts/font-name.eot");

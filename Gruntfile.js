@@ -160,7 +160,7 @@ module.exports = function (grunt) {
     /**
      * Include Replace
      * https://github.com/alanshaw/grunt-include-replace
-     * Grunt task to include files and replace variables. Allows for parameterised includes.
+     * Grunt task to include files and replace variables. Allows for parameterised includes
      */
     includereplace: {
       multisrcdest: {
@@ -168,9 +168,38 @@ module.exports = function (grunt) {
           globals: {title: 'ABS-CBN'}
         },
         files: {
-          'app': 'src/templates/*.html'
+          'app': 'src/templates/pages/*.html'
         }
       },
+    },
+
+    /**
+     * Prettify
+     * https://github.com/jonschlinkert/grunt-prettify
+     * HTML prettifier with a number of options for formatting HTML the way you like it
+     */
+    prettify: {
+      jsbeautifyrc: {
+        options: {
+          config: '.jsbeautifyrc'
+        },
+        files: [
+          { expand: true, cwd: 'app', src: ['*.html'], dest: 'app', ext: '.html' }
+        ]
+      }
+    },
+
+    /**
+     * Spritesmith
+     * https://github.com/Ensighten/grunt-spritesmith
+     * Grunt task for converting a set of images into a spritesheet and corresponding CSS variables
+     */
+    sprite: {
+      all: {
+        src: 'src/images/sprite/*.png',
+        destImg: '<%= project.assets %>/img/spritesheet.png',
+        destCSS: '<%= project.assets %>/css/sprites.scss'
+      }
     },
 
     /**
@@ -218,8 +247,10 @@ module.exports = function (grunt) {
    */
   grunt.registerTask('default', [
     'includereplace',
+    'prettify',
     'sass:dev',
     'jshint',
+    'sprite',
     'concat:dev',
     'connect:livereload',
     'open',
@@ -232,7 +263,6 @@ module.exports = function (grunt) {
    * Then compress all JS/CSS files
    */
   grunt.registerTask('build', [
-    'includereplace',
     'sass:dist',
     'jshint',
     'uglify'

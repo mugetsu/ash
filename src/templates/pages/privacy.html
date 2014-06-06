@@ -1,0 +1,57 @@
+<!doctype html>
+<html class="no-js">
+
+    <head>
+
+        <!-- START: META -->
+        @@include('../includes/meta.html', {
+            "title": "ASH | ABS-CBN",
+            "description": "Automated Scalable HTML5 Boilerplate powered by Grunt",
+            "og_type": "website",
+            "og_image": "assets/img/logo.svg",
+            "og_url": "",
+            "og_site-name": "ASH"
+        })
+        <!-- END: META -->
+
+        <!-- START: STYLES -->
+        @@include('../includes/styles.html')
+        <!-- END: STYLES -->
+
+        <!-- START: SCRIPTS -->
+        @@include('../includes/scripts-top.html')
+        <!-- END: SCRIPTS -->
+
+    </head>
+
+    <body>
+
+        <!-- START: SOCIAL PLUGINS -->
+        @@include('../includes/social-plugins.html')
+        <!-- END: SOCIAL PLUGINS-->
+
+        <!-- START: HEADER -->
+        @@include('../base/header.html', { "logo": "assets/img/logo.svg" })
+        <!-- END: HEADER -->
+
+        <!-- START: MAIN -->
+        <main class="main" role="main">
+            @@include('../data/privacy.html')
+        </main>
+        <!-- END: MAIN -->
+
+        <!-- START: ASIDE -->
+        @@include('../partials/aside.html')
+        <!-- END: ASIDE -->
+
+        <!-- START: FOOTER -->
+        @@include('../base/footer.html')
+        <!-- END: FOOTER -->
+
+        <!-- START: SCRIPTS -->
+        @@include('../includes/scripts-bottom.html')
+        <!-- END: SCRIPTS -->
+
+    </body>
+
+</html>
