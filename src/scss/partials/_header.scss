@@ -1,9 +1,11 @@
-.header {
+header {
 
 }
+
 .logo {
-  margin: -42.5px 0 0 -42.5px;
-  @include position(absolute, 50% 0 0 50%);
-  a { display: block; }
-  img { display: block; }
+	display: block;
+	margin: 20px 0;
+	text-align: center;
+	a {}
+	img {}
 }

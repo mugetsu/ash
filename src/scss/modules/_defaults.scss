@@ -4,11 +4,16 @@
   text-rendering:optimizeLegibility;
   @include vendor(box-sizing, border-box);
 }
+
 html {
-  font-size:62.5%;
+	position: relative;
+	min-height: 100%;
+	font-size:62.5%;
 }
+
 body {
-  font:300 13px/1.6 'Helvetica Neue', Helvetica, Arial;
-  background:#fff;
-  color:#444;
+	margin: 0 0 40px; /* Bottom = Footer Height */
+	font: 300 13px/1.6 "Helvetica Neue", Helvetica, Arial;
+	background: #fff;
+	color: #444;
 }
