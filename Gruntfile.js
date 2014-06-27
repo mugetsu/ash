@@ -1,5 +1,5 @@
 /*!
- * FireShell Gruntfile
+ * ASH Grunfile based on FireShell
  * http://getfireshell.com
  * @author Todd Motto
  */
@@ -28,7 +28,7 @@ module.exports = function (grunt) {
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
   /**
-   * FireShell Grunt config
+   * ASH Grunt config
    */
   grunt.initConfig({
 
@@ -184,8 +184,36 @@ module.exports = function (grunt) {
           config: '.jsbeautifyrc'
         },
         files: [
-          { expand: true, cwd: 'app', src: ['*.html'], dest: 'app', ext: '.html' }
+          { expand: true, cwd: '<%= project.app %>', src: ['*.html'], dest: 'app', ext: '.html' }
         ]
+      }
+    },
+
+    /**
+     * Wiredep
+     * https://github.com/stephenplusplus/grunt-wiredep
+     * Inject Bower packages into your source code with Grunt
+     */
+    wiredep: {
+      dev: {
+        src: ['app/*.html'],
+        cwd: '',
+        dependencies: true,
+        devDependencies: false,
+        exclude: [],
+        fileTypes: {},
+        ignorePath: [
+          "**/.*",
+          "node_modules",
+          "bower_components",
+          "test",
+          "tests"
+        ],
+        overrides: {
+          "jquery": {
+            "main": "dist/jquery.min.js"
+          }
+        }
       }
     },
 
@@ -198,7 +226,7 @@ module.exports = function (grunt) {
       all: {
         src: 'src/images/sprite/*.png',
         destImg: '<%= project.assets %>/img/spritesheet.png',
-        destCSS: '<%= project.assets %>/css/sprites.scss'
+        destCSS: 'src/scss/modules/sprites.scss'
       }
     },
 
@@ -252,6 +280,7 @@ module.exports = function (grunt) {
     'jshint',
     'sprite',
     'concat:dev',
+    'wiredep:dev',
     'connect:livereload',
     'open',
     'watch'

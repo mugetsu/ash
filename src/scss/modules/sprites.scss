@@ -16,8 +16,8 @@ $sprite1-width: 32px;
 $sprite1-height: 32px;
 $sprite1-total-width: 32px;
 $sprite1-total-height: 96px;
-$sprite1-image: '../img/spritesheet.png';
-$sprite1: 0px 0px 0px 0px 32px 32px 32px 96px '../img/spritesheet.png';
+$sprite1-image: '../../../app/assets/img/spritesheet.png';
+$sprite1: 0px 0px 0px 0px 32px 32px 32px 96px '../../../app/assets/img/spritesheet.png';
 $sprite2-x: 0px;
 $sprite2-y: 32px;
 $sprite2-offset-x: 0px;
@@ -26,8 +26,8 @@ $sprite2-width: 32px;
 $sprite2-height: 32px;
 $sprite2-total-width: 32px;
 $sprite2-total-height: 96px;
-$sprite2-image: '../img/spritesheet.png';
-$sprite2: 0px 32px 0px -32px 32px 32px 32px 96px '../img/spritesheet.png';
+$sprite2-image: '../../../app/assets/img/spritesheet.png';
+$sprite2: 0px 32px 0px -32px 32px 32px 32px 96px '../../../app/assets/img/spritesheet.png';
 $sprite3-x: 0px;
 $sprite3-y: 64px;
 $sprite3-offset-x: 0px;
@@ -36,8 +36,8 @@ $sprite3-width: 32px;
 $sprite3-height: 32px;
 $sprite3-total-width: 32px;
 $sprite3-total-height: 96px;
-$sprite3-image: '../img/spritesheet.png';
-$sprite3: 0px 64px 0px -64px 32px 32px 32px 96px '../img/spritesheet.png';
+$sprite3-image: '../../../app/assets/img/spritesheet.png';
+$sprite3: 0px 64px 0px -64px 32px 32px 32px 96px '../../../app/assets/img/spritesheet.png';
 
 /*
 The provided mixins are intended to be used with the array-like variables
