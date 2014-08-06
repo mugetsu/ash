@@ -224,9 +224,11 @@ module.exports = function (grunt) {
      */
     sprite: {
       all: {
-        src: 'src/images/sprite/*.png',
+        src: '<%= project.assets %>/img/sprite/*.png',
         destImg: '<%= project.assets %>/img/spritesheet.png',
-        destCSS: 'src/scss/modules/sprites.scss'
+        destCSS: 'src/scss/mixins/_sprite.scss',
+        algorithm: 'alt-diagonal',
+        padding: 2,
       }
     },
 

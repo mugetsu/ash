@@ -1,21 +1,35 @@
-@media only screen and (min-width:320px) {
+@media only screen and (max-width: $break-320) {
+	@import '../breakpoints/_breakpoint-320.scss';
+}
+
+@media only screen and (min-width: ($break-320 + 1px)) and (max-width: $break-480) {
+	@import '../breakpoints/_breakpoint-321-480.scss';
+}
+
+@media only screen and (min-width: ($break-480 + 1px)) and (max-width: $break-568) {
+	@import '../breakpoints/_breakpoint-481-568.scss';
+}
+
+@media only screen and (min-width: ($break-568 + 1px)) and (max-width: $break-728) {
+	@import '../breakpoints/_breakpoint-569-728.scss';
+}
+
+@media only screen and (min-width: ($break-728 + 1px)) and (max-width: $break-768) {
+	@import '../breakpoints/_breakpoint-729-768.scss';
+}
+
+@media only screen and (min-width: ($break-768 + 1px)) and (max-width: $break-1024) {
+	@import '../breakpoints/_breakpoint-769-1024.scss';
+}
+
+@media only screen and (min-width: ($break-1024 + 1px)) and (max-width: $break-1140) {
+	@import '../breakpoints/_breakpoint-1025-1140.scss';
+}
+
+@media only screen and (min-width: ($break-1140 + 1px)) and (max-width: $break-1280) {
 
 }
-@media only screen and (min-width:480px) {
 
-}
-@media only screen and (min-width:768px) {
-
-}
-@media only screen and (min-width:1024px) {
-
-}
-@media only screen and (min-width:1140px) {
-
-}
-@media only screen and (min-width:1280px) {
-
-}
 @media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
-
+	
 }

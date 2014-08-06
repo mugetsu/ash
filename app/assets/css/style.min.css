@@ -429,10 +429,6 @@ body {
   text-align: center;
 }
 
-.nav ul {
-  list-style: none;
-}
-
 .introduction {
   padding: 100px 0;
   text-align: center;
@@ -450,6 +446,10 @@ footer a {
   padding: 0 10px;
   color: #444;
   text-decoration: none;
+}
+
+.nav ul {
+  list-style: none;
 }
 
 @font-face {
