@@ -15,6 +15,7 @@
 @import 'mixins/_position.scss';
 @import 'mixins/_rotate.scss';
 @import 'mixins/_rounded-corners.scss';
+@import 'mixins/_sprite.scss';
 @import 'mixins/_text-shadow.scss';
 @import 'mixins/_type.scss';
 @import 'mixins/_vendor.scss';
@@ -39,7 +40,7 @@
 @import 'partials/_footer.scss';
 
 // Blocks
-@import 'partials/_nav.scss';
+@import 'partials/_main-menu.scss';
 @import 'partials/_sidebar.scss';
 
 //----------------------------------*\

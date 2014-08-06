@@ -1,0 +1,17 @@
+// ICONS
+.icons {
+	display: block;
+	width: 32px;
+	height: 32px;
+
+	&.icon-branch {
+		@include sprite($icon-branch);
+	}
+	&.icon-github {
+		@include sprite($icon-github);
+	}
+	&.icon-twitter {
+		@include sprite($icon-twitter);
+	}
+	
+}

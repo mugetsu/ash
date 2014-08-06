@@ -8,6 +8,27 @@
  */
 
 
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
 .clear:before, .clear:after {
   content: ' ';
   display: table;
@@ -476,6 +497,30 @@ footer a {
   background: #333;
   color: #fff;
   text-shadow: none;
+}
+
+.icons {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+.icons.icon-branch {
+  background-image: url(../img/spritesheet.png);
+  background-position: -68px 0px;
+  width: 32px;
+  height: 32px;
+}
+.icons.icon-github {
+  background-image: url(../img/spritesheet.png);
+  background-position: -34px -34px;
+  width: 32px;
+  height: 32px;
+}
+.icons.icon-twitter {
+  background-image: url(../img/spritesheet.png);
+  background-position: 0px -68px;
+  width: 32px;
+  height: 32px;
 }
 
 @media print {
