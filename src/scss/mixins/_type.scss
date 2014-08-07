@@ -10,3 +10,10 @@
         font-style: $style;
     }
 }
+
+@mixin use-font($family: $default, $size: 100%, $style: normal, $variation: 100){
+    font-family: $family, Helvetica, Arial, sans-serif;
+    font-size: $size;
+    font-style: $style;
+    font-weight: $variation;
+}
