@@ -31,6 +31,14 @@
 @import 'modules/_defaults.scss';
 
 //----------------------------------*\
+// FUNCTIONS
+//----------------------------------*/
+
+// Responsive functions
+@import 'functions/_fluid.scss';
+@import 'functions/_fluid-sprite.scss';
+
+//----------------------------------*\
 // PARTIALS
 //----------------------------------*/
 
