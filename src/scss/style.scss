@@ -43,13 +43,17 @@
 //----------------------------------*/
 
 // Base
-@import 'partials/_header.scss';
-@import 'partials/_main.scss';
-@import 'partials/_footer.scss';
+@import 'partials/base/_header.scss';
+@import 'partials/base/_main.scss';
+@import 'partials/base/_footer.scss';
 
 // Blocks
-@import 'partials/_main-menu.scss';
-@import 'partials/_sidebar.scss';
+@import 'partials/blocks/_main-menu.scss';
+@import 'partials/blocks/_sidebar.scss';
+
+// Layouts
+@import 'partials/layouts/_two-thirds.scss';
+@import 'partials/layouts/_three-columns.scss';
 
 //----------------------------------*\
 // OBJECTS & MODULES
