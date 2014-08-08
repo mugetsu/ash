@@ -433,15 +433,16 @@ table {
 html {
   position: relative;
   min-height: 100%;
-  font-size: 62.5%;
+  font-size: 100%;
 }
 
 body {
   margin: 0 0 40px;
   /* Bottom = Footer Height */
-  font: 300 13px/1.6 "Helvetica Neue", Helvetica, Arial;
-  background: #fff;
-  color: #444;
+  font-family: "Helvetica Neue", Helvetica, Arial;
+  font-size: 100%;
+  background: white;
+  color: black;
 }
 
 .logo {
@@ -505,19 +506,19 @@ footer a {
   height: 32px;
 }
 .icons.icon-branch {
-  background-image: url(../img/spritesheet.png);
+  background-image: url(img/spritesheet.png);
   background-position: -68px 0px;
   width: 32px;
   height: 32px;
 }
 .icons.icon-github {
-  background-image: url(../img/spritesheet.png);
+  background-image: url(img/spritesheet.png);
   background-position: -34px -34px;
   width: 32px;
   height: 32px;
 }
 .icons.icon-twitter {
-  background-image: url(../img/spritesheet.png);
+  background-image: url(img/spritesheet.png);
   background-position: 0px -68px;
   width: 32px;
   height: 32px;

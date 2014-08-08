@@ -8,12 +8,13 @@
 html {
 	position: relative;
 	min-height: 100%;
-	font-size:62.5%;
+	font-size: 100%;
 }
 
 body {
 	margin: 0 0 40px; /* Bottom = Footer Height */
-	font: 300 13px/1.6 "Helvetica Neue", Helvetica, Arial;
-	background: #fff;
-	color: #444;
+	font-family: "Helvetica Neue", Helvetica, Arial;
+	font-size: 100%;
+	background: $fair;
+	color: $dark;
 }
