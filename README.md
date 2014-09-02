@@ -4,7 +4,7 @@ C4 after detonation comes ASH (Automated Scalable HTML5 Boilerplate powered by G
 
 ## Documentation
 
-You may need to install a few assets before you can get started, such as [Node](http://nodejs.org/), [Git](github.com), [Grunt](http://gruntjs.com/).
+You may need to install a few assets before you can [get started](https://github.com/mugetsu/ash/blob/master/docs/DOCS.md), such as [Node](http://nodejs.org/), [Git](github.com), [Grunt](http://gruntjs.com/).
 
 ## Scaffolding
 
