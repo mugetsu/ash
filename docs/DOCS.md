@@ -3,7 +3,7 @@
 ## Project setup and Grunt installation
 ASH utilises open source components running on the Terminal/command-line for it's workflow, you'll need to install Node and Grunt. Here's a walkthrough of how to get a project up and running in minutes. Once Node and Grunt are installed all future projects running Grunt are instant.
 
-1. Install [Node.js](http://nodejs.org/download), [Sass](http://sass-lang.com/tutorial.html) and [Git](http://git-scm.com) on your machine. If you're a Windows user you'll also need to install [Ruby](http://rubyinstaller.org/downloads).
+1. Install [Node.js](http://nodejs.org/download), [Sass](http://sass-lang.com/tutorial.html), [Bower](http://bower.io/) and [Git](http://git-scm.com) on your machine. If you're a Windows user you'll also need to install [Ruby](http://rubyinstaller.org/downloads).
 2. [Install Grunt](http://gruntjs.com/getting-started) using `npm install -g grunt-cli`. You may need to use `sudo` in front of the Grunt install command to give it permissions. For Windows tips with Grunt checkout their [FAQs](http://gruntjs.com/frequently-asked-questions).
 3. Fork/Clone/Download the ASH repository into your machine, you should hopefully see all the files and folders.
 4. Navigate to the `grunt-dev.command` file and double-click it. This will open the Terminal and install the necessary `node_modules` folder, which are ASH's dependencies. The `grunt-dev.command` file includes a `sudo` prefix so you'll need to enter your password to install.

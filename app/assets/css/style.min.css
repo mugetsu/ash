@@ -1,7 +1,7 @@
 /*!
  * ASH
  * Automated Scalable HTML5 Boilerplate powered by Grunt
- * https://bitbucket.org/jondanao/ash
+ * https://github.com/mugetsu/ash
  * @author Randell Quitain
  * @version 1.0.0
  * Copyright 2014. MIT licensed.
@@ -513,19 +513,19 @@ footer a {
   height: 32px;
 }
 .icons.icon-branch {
-  background-image: url(../img/spritesheet.png);
+  background-image: url(app/assets/img/spritesheet.png);
   background-position: -68px 0px;
   width: 32px;
   height: 32px;
 }
 .icons.icon-github {
-  background-image: url(../img/spritesheet.png);
+  background-image: url(app/assets/img/spritesheet.png);
   background-position: -34px -34px;
   width: 32px;
   height: 32px;
 }
 .icons.icon-twitter {
-  background-image: url(../img/spritesheet.png);
+  background-image: url(app/assets/img/spritesheet.png);
   background-position: 0px -68px;
   width: 32px;
   height: 32px;
