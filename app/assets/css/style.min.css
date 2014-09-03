@@ -490,7 +490,7 @@ footer p {
 }
 
 .nav ul {
-  list-style: none;
+  padding: 0;
 }
 .nav li {
   display: inline-block;
