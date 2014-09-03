@@ -3,12 +3,17 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 40px;
+    height: 50px;
+    line-height: 50px;
     text-align: center;
 
     a {
     	padding: 0 10px;
 		color: #444;
 		text-decoration: none;
+    }
+
+    p {
+        margin: 0;
     }
 }

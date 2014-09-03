@@ -13,7 +13,7 @@
 
   $(function () {
     
-    console.log('ASH // ABS-CBN DEV');
+    console.log('ASH // Initialized');
 
   });
 

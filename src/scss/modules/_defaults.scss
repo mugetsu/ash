@@ -13,7 +13,7 @@ html {
 }
 
 body {
-	margin: 0 0 40px; /* Bottom = Footer Height */
+	margin: 0 0 50px; /* Bottom = Footer Height */
 	font-family: "Helvetica Neue", Helvetica, Arial;
 	font-size: 100%;
 	background: $fair;
@@ -22,8 +22,8 @@ body {
 
 // RESPONSIVE IMAGES
 .r-img {
-	display:block;
-	width:100% \9;
-	max-width:100%;
-	height:auto;
+	display: block;
+	width: 100% \9;
+	max-width: 100%;
+	height: auto;
 }
