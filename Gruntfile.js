@@ -212,6 +212,12 @@ module.exports = function (grunt) {
         overrides: {
           "jquery": {
             "main": "dist/jquery.min.js"
+          },
+          "enquire": {
+            "main": "dist/enquire.min.js"
+          },
+          "picturefill": {
+            "main": "dist/picturefill.min.js"
           }
         }
       }
@@ -225,9 +231,8 @@ module.exports = function (grunt) {
     sprite: {
       all: {
         src: 'src/images/sprite/*.png',
-        destImg: '<%= project.assets %>/img/spritesheet.png',
+        destImg: '../assets/img/spritesheet.png',
         destCSS: 'src/scss/mixins/_sprite.scss',
-        imgPath: '<%= project.assets %>/img/spritesheet.png',
         algorithm: 'alt-diagonal',
         padding: 2,
       }
