@@ -445,6 +445,19 @@ body {
   color: black;
 }
 
+.browsehappy {
+  margin: 20px auto;
+  padding: 20px;
+  width: 90%;
+  color: #333333;
+  text-align: center;
+  background: #dddddd;
+}
+.browsehappy a {
+  color: black;
+  font-weight: bold;
+}
+
 .r-img {
   display: block;
   width: 100% \9;

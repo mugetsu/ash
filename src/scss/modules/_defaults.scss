@@ -20,6 +20,21 @@ body {
 	color: $dark;
 }
 
+// BROWSE HAPPY
+.browsehappy {
+	margin: 20px auto;
+	padding: 20px;
+	width: 90%;
+	color: $dim;
+	text-align: center;
+	background: $grey;
+
+	a {
+		color: $dark;
+		font-weight: bold;
+	}
+}
+
 // RESPONSIVE IMAGES
 .r-img {
 	display: block;
