@@ -4,8 +4,6 @@ C4 after detonation comes ASH (Automated Scalable HTML5 Boilerplate powered by G
 
 ## Getting Started
 
-Install 
-
 1. Install [Node](http://nodejs.org/), [Sass](http://sass-lang.com/install) and [Git](http://git-scm.com/book/en/Getting-Started-Installing-Git) on your machine.
 
 2. [Install Grunt](http://gruntjs.com/getting-started) using `npm install -g grunt-cli`. You may need to use `sudo` in front of the Grunt install command to give it permissions. For Windows tips with Grunt checkout their [FAQs](http://gruntjs.com/frequently-asked-questions).
@@ -20,7 +18,7 @@ Install
 
 7. From now on, you can start grunt tasks using `grunt` command, this will run the default tasks while using `grunt build` will execute task for production like minifying css and js files. (you can check the Gruntfile.js for the tasks)
 
-8. Enjoy Coding! Don't forget to give this project a [star!](https://github.com/mugetsu/ash/stargazers) ;)
+8. Don't forget to give this project a [star!](https://github.com/mugetsu/ash/stargazers). Share more ;)
 
 ## Scaffolding
 
