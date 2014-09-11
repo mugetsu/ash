@@ -2,16 +2,32 @@
 
 C4 after detonation comes ASH (Automated Scalable HTML5 Boilerplate powered by Grunt)
 
-## Documentation
+## Getting Started
 
-You may need to install a few assets before you can [get started](https://github.com/mugetsu/ash/blob/master/docs/DOCS.md), such as [Node](http://nodejs.org/), [Git](https://github.com), [Bower](http://bower.io/), [Grunt](http://gruntjs.com/).
+Install 
+
+1. Install [Node](http://nodejs.org/), [Sass](http://sass-lang.com/install) and [Git](http://git-scm.com/book/en/Getting-Started-Installing-Git) on your machine.
+
+2. [Install Grunt](http://gruntjs.com/getting-started) using `npm install -g grunt-cli`. You may need to use `sudo` in front of the Grunt install command to give it permissions. For Windows tips with Grunt checkout their [FAQs](http://gruntjs.com/frequently-asked-questions).
+
+3. [Install Bower](http://bower.io/) using `npm install -g bower`
+
+4. Navigate your way to your ASH project directory `cd <TO_YOUR_ASH_BOILERPLATE>`
+
+5. Navigate to the `grunt-dev.command` file and double-click it. This will open the Terminal and install the necessary `node_modules` folder, which are ASH's dependencies. The `grunt-dev.command` file includes a `sudo` prefix so you'll need to enter your password to install.
+
+6. The `grunt-dev.command` should install all the dependencies, which you can check back to see in your folder, and then run the commands associated with ASH, and automatically open a new ASH project running on `localhost:9000`.
+
+7. From now on, you can start grunt tasks using `grunt` command, this will run the default tasks while using `grunt build` will execute task for production like minifying css and js files. (you can check the Gruntfile.js for the tasks)
+
+8. Enjoy Coding! Don't forget to give this project a [star!](https://github.com/mugetsu/ash/stargazers) ;)
 
 ## Scaffolding
 
 ````
 ├── app
 │   ├── apple-touch-icon-precomposed.png
-│   ├── assets
+│   ├── theme
 │   │   ├── css
 │   │   ├── fonts
 │   │   ├── img
@@ -38,8 +54,7 @@ You may need to install a few assets before you can [get started](https://github
 │       └── partials
 │           ├── base
 │           ├── blocks
-│           ├── content
-│           └── layouts
+│           └── content
 ├── docs
 ├── grunt-build.command
 ├── grunt-build.bat
@@ -52,6 +67,10 @@ You may need to install a few assets before you can [get started](https://github
 ├── .jshintrc
 └── .travis.yml
 ````
+
+## Documentation
+
+You may need to install a few assets before you can [get started](https://github.com/mugetsu/ash/blob/master/docs/DOCS.md), such as [Node](http://nodejs.org/), [Git](https://github.com), [Bower](http://bower.io/), [Grunt](http://gruntjs.com/).
 
 ## Roadmap
 
