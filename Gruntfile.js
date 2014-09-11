@@ -40,7 +40,7 @@ module.exports = function (grunt) {
     project: {
       src: 'src',
       app: 'app',
-      assets: '<%= project.app %>/assets',
+      theme: '<%= project.app %>/theme',
       css: [
         '<%= project.src %>/scss/style.scss'
       ],
@@ -91,7 +91,7 @@ module.exports = function (grunt) {
      * Manage the options inside .jshintrc file
      */
     jshint: {
-      files: ['src/js/*.js'],
+      files: ['<%= project.src %>/js/*.js'],
       options: {
         jshintrc: '.jshintrc'
       }
@@ -105,7 +105,7 @@ module.exports = function (grunt) {
     concat: {
       dev: {
         files: {
-          '<%= project.assets %>/js/scripts.min.js': '<%= project.js %>'
+          '<%= project.theme %>/js/scripts.min.js': '<%= project.js %>'
         }
       },
       options: {
@@ -126,7 +126,7 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          '<%= project.assets %>/js/scripts.min.js': '<%= project.js %>'
+          '<%= project.theme %>/js/scripts.min.js': '<%= project.js %>'
         }
       }
     },
@@ -143,7 +143,7 @@ module.exports = function (grunt) {
           banner: '<%= tag.banner %>'
         },
         files: {
-          '<%= project.assets %>/css/style.min.css': '<%= project.css %>'
+          '<%= project.theme %>/css/style.min.css': '<%= project.css %>'
         }
       },
       dist: {
@@ -152,7 +152,7 @@ module.exports = function (grunt) {
           banner: '<%= tag.banner %>'
         },
         files: {
-          '<%= project.assets %>/css/style.min.css': '<%= project.css %>'
+          '<%= project.theme %>/css/style.min.css': '<%= project.css %>'
         }
       }
     },
@@ -168,7 +168,7 @@ module.exports = function (grunt) {
           globals: {title: 'ABS-CBN'}
         },
         files: {
-          'app': 'src/templates/pages/*.html'
+          'app': '<%= project.src %>/templates/pages/*.html'
         }
       },
     },
@@ -184,7 +184,7 @@ module.exports = function (grunt) {
           config: '.jsbeautifyrc'
         },
         files: [
-          { expand: true, cwd: '<%= project.app %>', src: ['*.html'], dest: 'app', ext: '.html' }
+          { expand: true, cwd: '<%= project.app %>', src: ['*.html'], dest: '<%= project.app %>', ext: '.html' }
         ]
       }
     },
@@ -196,7 +196,7 @@ module.exports = function (grunt) {
      */
     wiredep: {
       dev: {
-        src: ['app/*.html'],
+        src: ['<%= project.app %>/*.html'],
         cwd: '',
         dependencies: true,
         devDependencies: false,
@@ -205,21 +205,9 @@ module.exports = function (grunt) {
         ignorePath: [
           "**/.*",
           "node_modules",
-          "bower_components",
           "test",
           "tests"
-        ],
-        overrides: {
-          "jquery": {
-            "main": "dist/jquery.min.js"
-          },
-          "enquire": {
-            "main": "dist/enquire.min.js"
-          },
-          "picturefill": {
-            "main": "dist/picturefill.min.js"
-          }
-        }
+        ]
       }
     },
 
@@ -230,10 +218,19 @@ module.exports = function (grunt) {
      */
     sprite: {
       all: {
-        src: 'src/images/sprite/*.png',
-        destImg: '../assets/img/spritesheet.png',
-        destCSS: 'src/scss/mixins/_sprite.scss',
-        algorithm: 'alt-diagonal',
+        src: '<%= project.src %>/images/sprite/*.png',
+        destImg: '<%= project.theme %>/img/sprite.png',
+        destCSS: '<%= project.src %>/scss/mixins/_sprite.scss',
+        imgPath: '<%= project.theme %>/img/sprite.png',
+        algorithm: 'top-down',
+        padding: 2,
+      },
+      dist: {
+        src: '<%= project.src %>/images/sprite/*.png',
+        destImg: '<%= project.theme %>/img/sprite.png',
+        destCSS: '<%= project.src %>/scss/mixins/_sprite.scss',
+        imgPath: '../img/sprite.png',
+        algorithm: 'top-down',
         padding: 2,
       }
     },
@@ -269,9 +266,9 @@ module.exports = function (grunt) {
         },
         files: [
           '<%= project.app %>/{,*/}*.html',
-          '<%= project.assets %>/css/*.css',
-          '<%= project.assets %>/js/{,*/}*.js',
-          '<%= project.assets %>/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+          '<%= project.theme %>/css/*.css',
+          '<%= project.theme %>/js/{,*/}*.js',
+          '<%= project.theme %>/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
       }
     }
@@ -285,7 +282,7 @@ module.exports = function (grunt) {
     'includereplace',
     'prettify',
     'sass:dev',
-    'jshint',
+    // 'jshint',
     'sprite',
     'concat:dev',
     'wiredep:dev',
@@ -301,7 +298,8 @@ module.exports = function (grunt) {
    */
   grunt.registerTask('build', [
     'sass:dist',
-    'jshint',
+    'sprite:dist',
+    // 'jshint',
     'uglify'
   ]);
 

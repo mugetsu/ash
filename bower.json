@@ -4,17 +4,5 @@
   "authors": [
     "Randell Quitain <@cprjk>"
   ],
-  "license": "MIT",
-  "dependencies": {
-    "jquery": "~2.1.1",
-    "modernizr": "~2.8.2",
-    "enquire": "~2.1.2",
-    "picturefill": "~2.1.0"
-  },
-  "devDependencies": {
-    "enquire": "~2.1.2",
-    "picturefill": "~2.1.0",
-    "modernizr": "~2.8.3",
-    "jquery": "~2.1.1"
-  }
+  "license": "MIT"
 }

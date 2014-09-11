@@ -12,7 +12,7 @@
         <!-- START: OPEN GRAPH -->
         <meta name="og:title" content="ASH by Randell Quitain">
         <meta name="og:type" content="website">
-        <meta name="og:image" content="assets/img/logo.svg">
+        <meta name="og:image" content="theme/img/logo.svg">
         <meta name="og:url" content="https://github.com/mugetsu/ash">
         <meta name="og:site_name" content="ASH">
         <meta name="og:description" content="Automated Scalable HTML5 Boilerplate powered by Grunt">
@@ -26,7 +26,7 @@
 
         <!-- START: STYLES -->
         <!-- START: STYLESHEETS -->
-        <link href="assets/css/style.min.css" rel="stylesheet">
+        <link href="theme/css/style.min.css" rel="stylesheet">
         <!-- END: STYLESHEETS -->
 
         <!-- START: BOOKMARK ICONS -->
@@ -43,6 +43,9 @@
         <!-- START: HTML5 SHIV (BASIC) -->
         <!--[if lt IE 9]><script>document.createElement('header');document.createElement('nav');document.createElement('main');document.createElement('section');document.createElement('article');document.createElement('aside');document.createElement('footer');</script><![endif]-->
         <!-- END: HTML5 SHIV (BASIC) -->
+
+        <!-- START: TYPEKIT -->
+        <!-- END: TYPEKIT -->
         <!-- END: SCRIPTS -->
 
     </head>
@@ -77,7 +80,7 @@
 
             <h2 class="logo">
 		<a href="/">
-			<img src="assets/img/logo.svg" alt="Logo">
+			<img src="theme/img/logo.svg" alt="Logo">
 		</a>
 	</h2>
 
@@ -109,10 +112,10 @@
                 <div class="responsive-images">
                     <picture>
                         <!--[if IE 9]><video style="display: none;"><![endif]-->
-                        <source srcset="assets/img/extralarge.jpg" media="(min-width: 1000px)">
-                            <source srcset="assets/img/large.jpg" media="(min-width: 800px)">
+                        <source srcset="theme/img/extralarge.jpg" media="(min-width: 1000px)">
+                            <source srcset="theme/img/large.jpg" media="(min-width: 800px)">
                                 <!--[if IE 9]></video><![endif]-->
-                                <img srcset="assets/img/medium.jpg" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+                                <img srcset="theme/img/medium.jpg" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
                     </picture>
                 </div>
                 <!-- END: RESPONSIVE IMAGES -->
@@ -130,15 +133,13 @@
         <!-- END: FOOTER -->
 
         <!-- START: SCRIPTS -->
-        <!-- bower:js -->
-        <script src="bower_components/modernizr/modernizr.js"></script>
-        <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="bower_components/enquire/dist/enquire.min.js"></script>
-        <script src="bower_components/picturefill/dist/picturefill.min.js"></script>
-        <!-- endbower -->
-
         <!-- START: SCRIPTS (APP) -->
-        <script src="assets/js/scripts.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="theme/js/jquery.min.js"></script>
+        <script src="theme/js/modernizr.js"></script>
+        <script src="theme/js/enquire.min.js"></script>
+        <script src="theme/js/picturefill.min.js"></script>
+        <script src="theme/js/scripts.min.js"></script>
         <!-- END: SCRIPTS (APP) -->
 
         <script>

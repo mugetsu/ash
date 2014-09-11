@@ -540,19 +540,19 @@ footer p {
   height: 32px;
 }
 .icons.icon-branch {
-  background-image: url(../../../../assets/img/spritesheet.png);
-  background-position: -68px 0px;
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
   width: 32px;
   height: 32px;
 }
 .icons.icon-github {
-  background-image: url(../../../../assets/img/spritesheet.png);
-  background-position: -34px -34px;
+  background-image: url(../img/sprite.png);
+  background-position: 0px -34px;
   width: 32px;
   height: 32px;
 }
 .icons.icon-twitter {
-  background-image: url(../../../../assets/img/spritesheet.png);
+  background-image: url(../img/sprite.png);
   background-position: 0px -68px;
   width: 32px;
   height: 32px;
