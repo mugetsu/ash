@@ -12,18 +12,18 @@
   },
   "devDependencies": {
     "connect-livereload": "~0.2.0",
-    "grunt": "^0.4.5",
+    "grunt": "~0.4.5",
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-connect": "~0.3.0",
     "grunt-contrib-jshint": "~0.4.3",
-    "grunt-contrib-sass": "~0.5.0",
-    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-sass": "~0.5.1",
+    "grunt-contrib-uglify": "~0.2.7",
     "grunt-contrib-watch": "~0.4.4",
     "grunt-include-replace": "~0.4.1",
-    "grunt-open": "~0.2.0",
-    "grunt-prettify": "~0.4.1",
-    "grunt-spritesmith": "^2.1.0",
-    "grunt-wiredep": "^1.8.0",
+    "grunt-open": "~0.2.3",
+    "grunt-prettify": "~0.3.5",
+    "grunt-spritesmith": "~2.1.1",
+    "grunt-wiredep": "~1.8.0",
     "matchdep": "~0.1.2"
   }
 }
