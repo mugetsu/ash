@@ -1,7 +1,7 @@
 /*!
- * ASH Grunfile based on FireShell
- * http://getfireshell.com
- * @author Todd Motto
+ * ASH Grunfile
+ * https://github.com/mugetsu/ash
+ * @author Randell Quitain
  */
 
 'use strict';
