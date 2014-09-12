@@ -1,6 +1,6 @@
 # ASH
 
-C4 after detonation comes ASH (Automated Scalable HTML5 Boilerplate powered by Grunt)
+[C4](https://bitbucket.org/jondanao/c4) after detonation comes ASH (Automated Scalable HTML5 Boilerplate powered by Grunt)
 
 ## Getting Started
 
