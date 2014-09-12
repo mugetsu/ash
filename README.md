@@ -10,7 +10,7 @@
 
 3. [Install Bower](http://bower.io/) using `npm install -g bower`
 
-4. Navigate your way to your ASH project directory `cd <TO_YOUR_ASH_BOILERPLATE>`
+4. Clone ASH Boilerplate `https://github.com/mugetsu/ash.git` and navigate your way to your ASH project directory `cd <TO_YOUR_ASH_BOILERPLATE>`
 
 5. Navigate to the `grunt-dev.command` file and double-click it. This will open the Terminal and install the necessary `node_modules` folder, which are ASH's dependencies. The `grunt-dev.command` file includes a `sudo` prefix so you'll need to enter your password to install.
 
