@@ -26,8 +26,6 @@
 
 // Config modules
 @import 'modules/_vars.scss';
-@import 'modules/_clearfix.scss';
-@import 'modules/_normalize.scss';
 @import 'modules/_defaults.scss';
 
 //----------------------------------*\
@@ -36,7 +34,6 @@
 
 // Responsive functions
 @import 'functions/_fluid.scss';
-@import 'functions/_fluid-sprite.scss';
 
 //----------------------------------*\
 // PARTIALS
@@ -47,14 +44,6 @@
 @import 'partials/_main.scss';
 @import 'partials/_footer.scss';
 
-// Blocks
-@import 'partials/_images.scss';
-@import 'partials/_main-menu.scss';
-
-// Layouts
-@import 'partials/_two-thirds.scss';
-@import 'partials/_three-columns.scss';
-
 //----------------------------------*\
 // OBJECTS & MODULES
 //----------------------------------*/
@@ -64,14 +53,8 @@
 @import 'modules/_lists.scss';
 @import 'modules/_typography.scss';
 @import 'modules/_misc.scss';
-@import 'modules/_app.scss';
-
-// Enhancement modules
-@import 'modules/_breakpoints.scss';
-@import 'modules/_print.scss';
 
 //----------------------------------*\
 // VENDOR
 //----------------------------------*/
-
 @import 'vendor/_external.scss';

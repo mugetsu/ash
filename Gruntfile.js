@@ -1,7 +1,6 @@
 /*!
- * ASH Grunfile based on FireShell
- * http://getfireshell.com
- * @author Todd Motto
+ * ASH Grunfile
+ * @author Randell Quitain
  */
 
 'use strict';
@@ -45,7 +44,7 @@ module.exports = function (grunt) {
         '<%= project.src %>/scss/style.scss'
       ],
       js: [
-        '<%= project.src %>/js/*.js'
+        '<%= project.src %>/scripts/*.js'
       ]
     },
 
@@ -86,18 +85,6 @@ module.exports = function (grunt) {
     },
 
     /**
-     * JSHint
-     * https://github.com/gruntjs/grunt-contrib-jshint
-     * Manage the options inside .jshintrc file
-     */
-    jshint: {
-      files: ['src/js/*.js'],
-      options: {
-        jshintrc: '.jshintrc'
-      }
-    },
-
-    /**
      * Concatenate JavaScript files
      * https://github.com/gruntjs/grunt-contrib-concat
      * Imports all .js files and appends project banner
@@ -105,7 +92,7 @@ module.exports = function (grunt) {
     concat: {
       dev: {
         files: {
-          '<%= project.assets %>/js/scripts.min.js': '<%= project.js %>'
+          '<%= project.assets %>/scripts/main.min.js': '<%= project.js %>'
         }
       },
       options: {
@@ -126,7 +113,7 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          '<%= project.assets %>/js/scripts.min.js': '<%= project.js %>'
+          '<%= project.assets %>/js/main.min.js': '<%= project.js %>'
         }
       }
     },
@@ -143,7 +130,7 @@ module.exports = function (grunt) {
           banner: '<%= tag.banner %>'
         },
         files: {
-          '<%= project.assets %>/css/style.min.css': '<%= project.css %>'
+          '<%= project.assets %>/styles/main.min.css': '<%= project.css %>'
         }
       },
       dist: {
@@ -152,74 +139,31 @@ module.exports = function (grunt) {
           banner: '<%= tag.banner %>'
         },
         files: {
-          '<%= project.assets %>/css/style.min.css': '<%= project.css %>'
+          '<%= project.assets %>/styles/main.min.css': '<%= project.css %>'
         }
       }
     },
 
     /**
-     * Include Replace
-     * https://github.com/alanshaw/grunt-include-replace
-     * Grunt task to include files and replace variables. Allows for parameterised includes
+     * Pug
+     * https://github.com/gruntjs/grunt-contrib-pug
+     * Grunt task for compiling pug templates
      */
-    includereplace: {
-      multisrcdest: {
+    pug: {
+      compile: {
         options: {
-          globals: {title: 'ABS-CBN'}
-        },
-        files: {
-          'app': 'src/templates/pages/*.html'
-        }
-      },
-    },
-
-    /**
-     * Prettify
-     * https://github.com/jonschlinkert/grunt-prettify
-     * HTML prettifier with a number of options for formatting HTML the way you like it
-     */
-    prettify: {
-      jsbeautifyrc: {
-        options: {
-          config: '.jsbeautifyrc'
-        },
-        files: [
-          { expand: true, cwd: '<%= project.app %>', src: ['*.html'], dest: 'app', ext: '.html' }
-        ]
-      }
-    },
-
-    /**
-     * Wiredep
-     * https://github.com/stephenplusplus/grunt-wiredep
-     * Inject Bower packages into your source code with Grunt
-     */
-    wiredep: {
-      dev: {
-        src: ['app/*.html'],
-        cwd: '',
-        dependencies: true,
-        devDependencies: false,
-        exclude: [],
-        fileTypes: {},
-        ignorePath: [
-          "**/.*",
-          "node_modules",
-          "bower_components",
-          "test",
-          "tests"
-        ],
-        overrides: {
-          "jquery": {
-            "main": "dist/jquery.min.js"
-          },
-          "enquire": {
-            "main": "dist/enquire.min.js"
-          },
-          "picturefill": {
-            "main": "dist/picturefill.min.js"
+          data: {
+            debug: true,
+            pretty: true
           }
-        }
+        },
+        files: [{
+          cwd: '<%= project.src %>/views',
+          src: "*.pug",
+          dest: '<%= project.app %>',
+          expand: true,
+          ext: '.html'
+        }]
       }
     },
 
@@ -230,11 +174,24 @@ module.exports = function (grunt) {
      */
     sprite: {
       all: {
-        src: 'src/images/sprite/*.png',
-        destImg: '../assets/img/spritesheet.png',
-        destCSS: 'src/scss/mixins/_sprite.scss',
+        src: '<%= project.src %>/images/sprite/{,*/}*.png',
+        dest: '<%= project.assets %>/images/spritesheet.png',
+        destCss: '<%= project.src %>/scss/mixins/_sprite.scss',
         algorithm: 'alt-diagonal',
-        padding: 2,
+        padding: 2
+      }
+    },
+
+    /**
+     * Bower
+     * https://github.com/curist/grunt-bower
+     * Grunt task for copying bower installed components to dist folder
+     */
+    bower: {
+      dev: {
+        dest: '<%= project.assets %>/',
+        js_dest: '<%= project.assets %>/scripts',
+        css_dest: '<%= project.assets %>/styles'
       }
     },
 
@@ -256,12 +213,16 @@ module.exports = function (grunt) {
      */
     watch: {
       concat: {
-        files: '<%= project.src %>/js/{,*/}*.js',
-        tasks: ['concat:dev', 'jshint']
+        files: '<%= project.src %>/scripts/{,*/}*.js',
+        tasks: ['concat:dev']
       },
       sass: {
         files: '<%= project.src %>/scss/{,*/}*.{scss,sass}',
         tasks: ['sass:dev']
+      },
+      pug: {
+        files: '<%= project.src %>/views/*.pug',
+        tasks: ['pug']
       },
       livereload: {
         options: {
@@ -269,8 +230,8 @@ module.exports = function (grunt) {
         },
         files: [
           '<%= project.app %>/{,*/}*.html',
-          '<%= project.assets %>/css/*.css',
-          '<%= project.assets %>/js/{,*/}*.js',
+          '<%= project.assets %>/styles/*.css',
+          '<%= project.assets %>/scripts/{,*/}*.js',
           '<%= project.assets %>/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
       }
@@ -282,16 +243,22 @@ module.exports = function (grunt) {
    * Run `grunt` on the command line
    */
   grunt.registerTask('default', [
-    'includereplace',
-    'prettify',
+    // 'bower:dev',
     'sass:dev',
-    'jshint',
-    'sprite',
     'concat:dev',
-    'wiredep:dev',
+    'pug',
     'connect:livereload',
     'open',
     'watch'
+  ]);
+
+  /**
+   * Build spritesheet
+   * Run `grunt spritesheet` on the command line
+   * Creates spritesheet
+   */
+  grunt.registerTask('spritesheet', [
+    'sprite'
   ]);
 
   /**
@@ -301,7 +268,6 @@ module.exports = function (grunt) {
    */
   grunt.registerTask('build', [
     'sass:dist',
-    'jshint',
     'uglify'
   ]);
 

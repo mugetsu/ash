@@ -88,10 +88,10 @@ The package.json includes the dependencies for the project as well as informatio
 /*!
  * ASH
  * Automated Scalable HTML5 Boilerplate powered by Grunt
- * https://bitbucket.org/jondanao/ash
+ * https://github.com/mugetsu/ash
  * @author Randell Quitain
- * @version 1.0.0
- * Copyright 2014. MIT licensed.
+ * @version 1.0.1
+ * Copyright 2016. MIT licensed.
  */
 ````
 
@@ -119,10 +119,9 @@ Add new tasks to either the default `grunt` task or `grunt build` task at the en
  * Run `grunt` on the command line
  */
 grunt.registerTask('default', [
-  'includereplace',
   'sass:dev',
-  'jshint',
   'concat:dev',
+  'pug',
   'connect:livereload',
   'open',
   'watch'

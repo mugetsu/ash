@@ -7,38 +7,19 @@
 }
 
 html {
-	position: relative;
 	min-height: 100%;
 	font-size: 100%;
 }
 
 body {
-	margin: 0 0 50px; /* Bottom = Footer Height */
-	font-family: "Helvetica Neue", Helvetica, Arial;
+	margin: 0;
+	font-family: 'Helvetica Neue', Helvetica, Arial;
 	font-size: 100%;
 	background: $fair;
 	color: $dark;
-}
 
-// BROWSE HAPPY
-.browsehappy {
-	margin: 20px auto;
-	padding: 20px;
-	width: 90%;
-	color: $dim;
-	text-align: center;
-	background: $grey;
-
-	a {
-		color: $dark;
-		font-weight: bold;
-	}
-}
-
-// RESPONSIVE IMAGES
-.r-img {
-	display: block;
-	width: 100% \9;
-	max-width: 100%;
-	height: auto;
+	/* Sticky Footer Solution */
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
 }

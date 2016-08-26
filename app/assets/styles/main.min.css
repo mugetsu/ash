@@ -1,0 +1,109 @@
+/*!
+ * ASH
+ * Automated Scalable HTML5 Boilerplate powered by Grunt
+ * https://github.com/mugetsu/ash
+ * @author Randell Quitain
+ * @version 1.0.1
+ * Copyright 2016. MIT licensed.
+ */
+
+
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+* {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial;
+  font-size: 100%;
+  background: #FFF;
+  color: #000;
+  /* Sticky Footer Solution */
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+}
+
+.main-section {
+  margin: 0 auto;
+  /* Sticky Footer Solution */
+  flex: 1;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+}
+footer a {
+  padding: 0 10px;
+  color: #444;
+  text-decoration: none;
+}
+footer p {
+  margin: 0;
+  line-height: 50px;
+}
+
+@font-face {
+  font-family: 'Font-Name';
+  src: url("../fonts/font-name.eot");
+  src: url("../fonts/font-name.eot?#iefix") format("embedded-opentype"), url("../fonts/font-name.woff") format("woff"), url("../fonts/font-name.ttf") format("truetype"), url("../fonts/font-name.svg#font-name") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+::selection {
+  background: #333;
+  color: #fff;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: #333;
+  color: #fff;
+  text-shadow: none;
+}
+
+::-webkit-selection {
+  background: #333;
+  color: #fff;
+  text-shadow: none;
+}
+
+/*# sourceMappingURL=main.min.css.map */

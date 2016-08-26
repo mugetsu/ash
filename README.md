@@ -12,11 +12,12 @@ You may need to install a few assets before you can [get started](https://github
 ├── app
 │   ├── apple-touch-icon-precomposed.png
 │   ├── assets
-│   │   ├── css
 │   │   ├── fonts
-│   │   ├── img
-│   │   └── js
+│   │   ├── images
+│   │   ├── scripts
+│   │   └── styles
 │   ├── favicon.ico
+│   ├── favicon.png
 │   └── index.html
 ├── src
 │   ├── images
@@ -25,21 +26,15 @@ You may need to install a few assets before you can [get started](https://github
 │   │   └── scripts.js
 │   │
 │   ├── scss
-│   │	├── breakpoints
 │   │	├── mixins
 │   │   ├── modules
 │   │   ├── partials
 │   │   ├── vendor
 │   │   └── style.scss
 │   │
-│   └── templates
+│   └── views
 │       ├── includes
-│       ├── pages
-│       └── partials
-│           ├── base
-│           ├── blocks
-│           ├── content
-│           └── layouts
+│       └── *.pug
 ├── docs
 ├── grunt-build.command
 ├── grunt-build.bat
@@ -55,8 +50,7 @@ You may need to install a few assets before you can [get started](https://github
 
 ## Roadmap
 
-* Grunt tasks to be polished.
-* Standard code snippets for example, Validation.. etc.
+* Create a flow for Grunt Bower dist files to public assets
 
 ## Contributors
 

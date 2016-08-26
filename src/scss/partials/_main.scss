@@ -1,4 +1,6 @@
-.main {
+.main-section {
 	margin: 0 auto;
-	width: fluid($break-1280 - 80px, $break-1280);
+	
+	/* Sticky Footer Solution */
+	flex: 1;
 }
