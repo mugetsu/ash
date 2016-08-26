@@ -221,7 +221,7 @@ module.exports = function (grunt) {
         tasks: ['sass:dev']
       },
       pug: {
-        files: '<%= project.src %>/views/*.pug',
+        files: '<%= project.src %>/views/{,*/}*.pug',
         tasks: ['pug']
       },
       livereload: {
