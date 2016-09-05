@@ -26,7 +26,6 @@
 
 // Config modules
 @import 'modules/_vars.scss';
-@import 'modules/_defaults.scss';
 
 //----------------------------------*\
 // FUNCTIONS
@@ -40,6 +39,7 @@
 //----------------------------------*/
 
 // Base
+@import 'partials/_defaults.scss';
 @import 'partials/_header.scss';
 @import 'partials/_main.scss';
 @import 'partials/_footer.scss';
