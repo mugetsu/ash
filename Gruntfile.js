@@ -152,9 +152,10 @@ module.exports = function (grunt) {
     pug: {
       compile: {
         options: {
+          client: false,
+          pretty: true,
           data: {
-            debug: true,
-            pretty: true
+              debug: false
           }
         },
         files: [{
@@ -257,7 +258,7 @@ module.exports = function (grunt) {
    * Run `grunt spritesheet` on the command line
    * Creates spritesheet
    */
-  grunt.registerTask('spritesheet', [
+  grunt.registerTask('sprite', [
     'sprite'
   ]);
 
