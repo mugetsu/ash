@@ -52,8 +52,28 @@ body {
   background: #FFF;
   color: #000;
   /* Sticky Footer Solution */
-  display: flex;
   min-height: 100vh;
+  /**
+  * Making the <body> element behave like a flexbox container:
+  */
+  /* Ye Olde Flexbox for Webkit */
+  display: -webkit-box;
+  /* Tweener flexbox */
+  display: -ms-flexbox;
+  /* Prefixed "new flexbox" */
+  display: -webkit-flex;
+  /* unprefixed standard "new flexbox" version */
+  display: flex;
+  /**
+  * Making the things inside <body> line up vertically
+  */
+  /* Your grandparents flexbox for Webkit */
+  -webkit-box-orient: vertical;
+  /* Prefixed new syntax: */
+  -webkit-flex-direction: column;
+  /* Same syntax for weird IE tweener */
+  -ms-flex-direction: column;
+  /* unprefixed new syntax */
   flex-direction: column;
 }
 
