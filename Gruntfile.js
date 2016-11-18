@@ -258,7 +258,7 @@ module.exports = function (grunt) {
    * Run `grunt spritesheet` on the command line
    * Creates spritesheet
    */
-  grunt.registerTask('sprite', [
+  grunt.registerTask('spritesheet', [
     'sprite'
   ]);
 
