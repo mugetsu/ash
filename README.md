@@ -1,4 +1,4 @@
-# ASH
+# ASH [![Build Status](https://travis-ci.org/mugetsu/ash.svg?branch=master)](https://travis-ci.org/mugetsu/ash)
 
 C4 after detonation comes ASH (Automated Scalable HTML5 Boilerplate powered by Grunt)
 
