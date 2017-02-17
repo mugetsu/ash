@@ -1,5 +1,10 @@
 language: node_js
 node_js:
   - "0.8"
+before_install:
+  - sudo su -c "gem install sass"
+install:
+  - npm install
+  - grunt
 before_script:
   - npm install grunt-cli -g
