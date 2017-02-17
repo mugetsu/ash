@@ -9,4 +9,5 @@ before_script:
   - npm install grunt-cli -g
   - npm install
   - npm test
+script:
   - grunt build
