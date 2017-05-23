@@ -1,0 +1,19 @@
+// COMPONENT (BEM)
+
+$c: '.component';
+
+#{$c}{
+  display: block;
+}
+
+#{$c}__child {
+  background: red;
+}
+
+#{$c}__another-child {
+  background: green;
+}
+
+#{$c}__third-child {
+  background: blue;
+}
