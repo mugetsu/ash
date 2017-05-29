@@ -35,6 +35,16 @@
 @import 'functions/_fluid.scss';
 
 //----------------------------------*\
+// OBJECTS & MODULES
+//----------------------------------*/
+
+@import 'modules/_buttons.scss';
+@import 'modules/_inputs.scss';
+@import 'modules/_lists.scss';
+@import 'modules/_typography.scss';
+@import 'modules/_misc.scss';
+
+//----------------------------------*\
 // PARTIALS
 //----------------------------------*/
 
@@ -45,14 +55,10 @@
 @import 'partials/_footer.scss';
 
 //----------------------------------*\
-// OBJECTS & MODULES
+// COMPONENTS
 //----------------------------------*/
 
-@import 'modules/_buttons.scss';
-@import 'modules/_inputs.scss';
-@import 'modules/_lists.scss';
-@import 'modules/_typography.scss';
-@import 'modules/_misc.scss';
+@import 'partials/_sample-component.scss';
 
 //----------------------------------*\
 // VENDOR
